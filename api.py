@@ -15,11 +15,11 @@ def update_item(
     Puts a new resource to the database.
 
     Args:
-        resource (str): The name of the resource to put.
-        **args: The arguments to pass to the put method.
+        resource (boto3.dynamodb.table): boto3 table resource
+        Key: the key of the item to update
 
     Returns:
-        dict: The response from the put method.
+        nothing for now
     """
 
     current_batch_factorization = 1
