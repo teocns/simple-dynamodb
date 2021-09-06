@@ -52,7 +52,7 @@ def update_item(
                 
                 print('Updated successfully a batch of %s items' % update_length)
                 
-                # When some batch fails, we need to repeat updates on batches' attributes that were successfully executed
+                # When some batch fails, we don't need to repeat updates on batches' attributes that were successfully executed
                 successfully_updated_keys.extend(
                     list(update_instructions_batch.original_updates.keys())
                 )
