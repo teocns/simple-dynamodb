@@ -40,10 +40,7 @@ def update_item(
             l = list(update_instructions_batches)
             it = 0
             for update_instructions_batch in l:
-                it += 1
                 print("Batch: {}".format(it))
-                if it == 20:
-                    raise Exception("Forced fail xD for debug - Expression size has exceeded the maximum allowed size")
 
                 response = table_resource.update_item(
                     Key=Key,
