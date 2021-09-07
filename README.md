@@ -9,10 +9,10 @@ import boto3
 
 
 updates={
-	"my_increment_variable": [0,1] ,# "my_increment_variable = if_not_exists(my_increment_variable,0) + 1"	,
-	"only_if_not_exists": ["alpha"] ,# "only_if_not_exists = if_not_exists(only_if_not_exists,alpha)",
-	"assigned_variable": "ciao" ,# "assigned_variable = ciao",
-	"appendable": [[1]] ,# appendable = list_append(if_not_exists(appendable,[]), [1])
+	"my_increment_variable": [0,1] ,   # my_increment_variable = if_not_exists(my_increment_variable,0) + 1
+	"only_if_not_exists": ["alpha"] ,  # only_if_not_exists = if_not_exists(only_if_not_exists,alpha)
+	"assigned_variable": "ciao" ,      # assigned_variable = ciao
+	"appendable": [[1]] ,              # appendable = list_append(if_not_exists(appendable,[]), [1])
 }
 
 deletes=[
