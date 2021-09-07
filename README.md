@@ -20,13 +20,15 @@ deletes=[
 	"attr2",
 ]
 
+condition = "#asd = :asd" 
+condition = "#asdddsad = :132"
+
 update_item(
     boto3.resource('dynamodb').Table('yourtable'),
     Key={
         "yyyy-mm-dd": "asd",
         "user_id": "asd"
     },
-
-    update_instructions= UpdateItemsInstructions(updates,deletes),
+    update_instructions= UpdateItemsInstructions(updates,deletes,condition),
 )
 ```
