@@ -5,23 +5,21 @@ class UpdateItemExpressions:
     UpdateExpression: str
     ExpressionAttributeNames: dict
     ExpressionAttributeValues: dict
-    
+    ConditionExpression: str
 
 
     original_updates: dict
     original_deletes : list
+    original_condition_expression: str
 
-    allowed_limits = {
-        "ExpressionAttributes": 2097152 * allowed_limits_margin,
-        "UpdateExpression": 4096 * allowed_limits_margin,
-        "Operators": 300 * allowed_limits_margin
-    }
+    
 
     def __init__(
         self,
         UpdateExpression: str,
         ExpressionAttributeNames: dict,
         ExpressionAttributeValues: dict,
+        ConditionExpression: str,
         original_updates: dict,
         original_deletes: list
     ):
@@ -30,4 +28,5 @@ class UpdateItemExpressions:
         self.ExpressionAttributeValues = ExpressionAttributeValues
         self.original_updates = original_updates
         self.original_deletes = original_deletes
+        self.ConditionExpression = ConditionExpression
 
