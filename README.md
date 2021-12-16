@@ -1,4 +1,6 @@
-# Example to run
+## Abstraction of DynamoDB boto3 client.
+
+# The following client is used mainly in DynamoDB Lambda triggers to process and aggregate data.
 ```
 
 from SimpleDyDb.UpdateItemInstructions import UpdateItemsInstructions
